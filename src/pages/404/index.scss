@@ -1,0 +1,26 @@
+.seven-peaks-not-found {
+    text-align: center;
+    font-size: 100px;
+    display: block;
+    padding: 500px 50px;
+    line-height: 100px;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1024px) {
+    .seven-peaks-not-found {
+        font-size: 65px;
+        padding-bottom: 450px;
+    }
+}
+
+// Mobile
+@media (max-width: 767px) {
+    .seven-peaks-not-found {
+        font-size: 38px;
+        line-height: 40px;
+        padding: 150px 5px;
+    }
+}

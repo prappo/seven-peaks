@@ -1,0 +1,37 @@
+.seven-peaks-bookmark-toast {
+    font-family: var(--roboto);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #388E3C;
+    width: 100%;
+    height: 32px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: -32px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+
+    &-show {
+        bottom: 0px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &-type-danger {
+        background-color: #D32F2F;
+    }
+
+    &-icon {
+        margin-right: 5px;
+        width: 20px;
+    }
+}

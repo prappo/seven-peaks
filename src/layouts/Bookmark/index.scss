@@ -1,0 +1,50 @@
+.seven-peaks-sort-bookmark-section {
+    display: flex;
+    align-items: center;
+    padding-top: 43px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+
+    .seven-peaks-bookmark {
+        margin-left: auto;
+        margin-right: 22px;
+        align-self: end;
+    }
+}
+
+.seven-peaks-sort-bookmark {
+    &-title {
+        font-family: 'Georgia Bold';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 49px;
+        color: var(--color);
+        margin: 0;
+        display: inline-block;
+        text-transform: capitalize;
+    }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1024px) {
+    .seven-peaks-sort-bookmark {
+        &-title {
+            font-size: 35px;
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 767px) {
+    .seven-peaks-sort-bookmark {
+        &-title {
+            font-size: 35px;
+        }
+
+        &-section,
+        .seven-peaks-select-wrapper {
+            display: block;
+        }
+    }
+}

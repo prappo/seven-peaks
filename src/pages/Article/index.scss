@@ -1,0 +1,162 @@
+.seven-peaks-single-article {
+    display: flex;
+    padding-top: 63px;
+    padding-bottom: 290px;
+    flex-direction: column;
+}
+
+.seven-peaks-single-thumbnail {
+    width: 400px;
+    padding-left: 30px;
+    box-sizing: border-box;
+
+    &-item {
+        margin-bottom: 30px
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+.seven-peaks-single-article {
+    &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+
+        &.has-thumb {
+            width: calc(100% - 445px);
+        }
+    }
+
+    .seven-peaks-bookmark {
+        margin-bottom: 20px;
+    }
+
+    &-date {
+        font-family: var(--roboto);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 31px;
+        letter-spacing: 0.83px;
+        text-transform: uppercase;
+        color: var(--color);
+        display: block;
+        padding-bottom: 8px;
+    }
+
+    &-title {
+        font-family: var(--georgia-bold);
+        font-style: normal;
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 39px;
+        letter-spacing: 0.07px;
+        color: var(--color);
+        margin: 0
+    }
+
+    &-headline {
+        font-family: var(--georgia-bold);
+        margin: 0;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.07px;
+        color: var(--color);
+        margin-top: 10px;
+    }
+
+    &-separator {
+        mix-blend-mode: normal;
+        opacity: 0.2;
+        border: 1px solid #979797;
+        margin: 15px 0;
+        width: 100%
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: row-reverse;
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                color: var(--primary_color)
+            }
+        }
+    }
+
+    &-content {
+        font-family: var(--roboto);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+        color: var(--color);
+        flex: 1;
+
+        p,
+        li {
+            margin: 0;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0
+            }
+        }
+
+        p,
+        a {
+            color: var(--color);
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1024px) {
+    .seven-peaks-single-article-body {
+        flex-direction: column;
+    }
+
+    .seven-peaks-single-thumbnail {
+        width: 100%;
+        padding: 0;
+    }
+
+    .seven-peaks-single-article-header.has-thumb {
+        width: 100%;
+    }
+}
+
+// Mobile
+@media (max-width: 767px) {
+    .seven-peaks-single-article {
+        &-body {
+            flex-direction: column;
+        }
+
+        &-title {
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+        &-headline {
+            font-size: 18px;
+        }
+    }
+
+    .seven-peaks-single-thumbnail {
+        width: 100%;
+        padding: 0;
+    }
+
+    .seven-peaks-single-article-header.has-thumb {
+        width: 100%;
+    }
+}

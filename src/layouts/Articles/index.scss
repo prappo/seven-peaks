@@ -1,0 +1,127 @@
+.seven-peaks-articles {
+    display: grid;
+    margin: -15px;
+
+    &.column-3 {
+        grid-template-columns: repeat(auto-fit, 33.33%);
+    }
+
+    &.column-4 {
+        grid-template-columns: repeat(auto-fit, 25%);
+    }
+
+    &.top-news {
+        grid-template-areas:
+            "a a b c"
+            "a a d e";
+
+        >.seven-peaks-article:nth-child(1) {
+            grid-area: a;
+
+            .seven-peaks-card-content {
+                border-color: #388E3C;
+
+                &-title {
+                    font-size: 24px;
+                    line-height: 31px;
+                }
+            }
+        }
+
+        >.seven-peaks-article:nth-child(2) {
+            grid-area: b;
+
+            .seven-peaks-card-content {
+                border-color: #D32F2F;
+                ;
+            }
+        }
+
+        >.seven-peaks-article:nth-child(3) {
+            grid-area: c;
+
+            .seven-peaks-card-content {
+                border-color: #FFC107;
+            }
+        }
+
+        >.seven-peaks-article:nth-child(4) {
+            grid-area: d;
+
+            .seven-peaks-card-content {
+                border-color: #2196F3;
+            }
+        }
+
+        >.seven-peaks-article:nth-child(5) {
+            grid-area: e;
+
+            .seven-peaks-card-content {
+                border-color: #388E3C;
+                ;
+            }
+        }
+
+        >.seven-peaks-article:not(:nth-child(1)) {
+            .seven-peaks-card-thumbnail {
+                min-height: 255px;
+            }
+        }
+
+
+        .seven-peaks-card-content {
+            border-color: #388E3C;
+
+            &.no-thumb {
+                min-height: auto;
+            }
+
+
+            &-title {
+                font-size: 18px;
+                line-height: 27px;
+                letter-spacing: 0.063px;
+            }
+        }
+
+    }
+
+}
+
+.seven-peaks-article {
+    padding: 15px;
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1024px) {
+    .seven-peaks-articles {
+        &.column-md-2 {
+            grid-template-columns: repeat(auto-fit, 50%);
+        }
+
+        &.top-news {
+            grid-template-areas:
+                "a a a a"
+                "b b c c"
+                "d d e e"
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 767px) {
+    .seven-peaks-articles {
+        &.column-md-2 {
+            grid-template-columns: repeat(auto-fit, 100%);
+        }
+
+        &.top-news {
+            grid-template-areas:
+                "a a a a"
+                "b b b b"
+                "c c c c"
+                "d d d d"
+                "e e e e"
+        }
+    }
+}
